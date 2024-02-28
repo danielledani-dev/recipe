@@ -179,7 +179,6 @@ menu {
     list-style: none;
     text-decoration: none;
     margin-bottom: 20px;
-    text-wrap: wrap;
 }
 menu span {
     display: inline-block;
@@ -215,7 +214,7 @@ menu li:hover {
     font-size: 30px;
     text-align: center;
 }
-#detail-bold {
+.detail-bold {
     font-family: "Montserrat";
     font-size: 16px;
     font-weight: bold;
@@ -269,60 +268,52 @@ menu li:hover {
     line-height: 1.5rem;
     padding: 0 10px 10px 20px;
 }
-#side_dishes {
-    display: grid;
-    position: absolute;
-    grid-template-columns: 30% 60%;
-    grid-template-rows: 1fr;
-    background-color:#7ABFBF;
-    width: 414px;
-    align-items: center;
+#search {
+    visibility: hidden;
+}
+#side_dishes img{
+    max-width: 30%;
+    max-height: 30%;
 }
 #side_dishes h2 {
-    display: block;
     position: relative;
+    display: grid;
+    margin: 10px 100px 10px 130px;
     font-size: 30px;
-    text-align: center;
-    margin: 10px 15px 11px 15px;
-    width: 390px;
 }
-#side_dishes img {
-   grid-column: 1/1;
-   margin-left: 10px;
-   margin-bottom: -16px;
+#side_dishes {
+    display: flex;
+    flex-direction: column;
+    background-color: #7ABFBF;
 }
 #side_dishes h3 {
-    grid-column: 2;
-    font-size: 25px;
-    top: 1em;
+    margin-left: 140px;
     position: relative;
-}
-#side_dishes h3:first-of-type {
-    top:2em;
+    font-size: 25px;
+    top:1em;
 }
 #side_dishes p {
-    grid-column: 2;
-    font-family: "Montserrat";
     font-size: 16px;
+    margin-left: 140px;
+    font-family: "Montserrat";
+    position: relative;
+    top: -5em;
 }
 #side_dishes svg {
+    margin-left: 10px;
     position: relative;
-    top: -1.4em;
-    left: 7.5em;
-    padding: 0 0 0 4px;
-    margin: 0;
+    left: 7em;
+    top: -4em;
 }
-#rating {
-    position: relative;
-    top: -1.75em;
-    font-weight: bold;
+#side_dishes span {
+    height: 0px;
 }
 #connect {
     display: grid;
     position: relative;
     width: 414px;
-    margin-top: 603px;
-    height: 475px;
+    margin-top: -43px;
+    height: 550px;
     background-color: white;
 }
 #connect h2 {
@@ -350,37 +341,377 @@ menu li:hover {
    margin-left: 7px;
 }
 footer {
-    position: absolute;
-    top: 2853px;
-    right: 190px;
+    position: relative;
+    display: grid;
+    margin: 250px 20px 20px 0px ;
+    bottom: 31.5em;
+    background-color: white;
     width: 414px;
-    height: 300px;
+    height: 400px;
 }
 footer p {
-    display: flex;
-    position: relative;
-    top: 18em;
-    right: 3em;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-items: center;
     font-size: 20px;
+    position: relative;
+    top: 21em;
+    text-align: center;
 }
 footer img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 90%;
+    max-height: 90%;
+    margin-left: 40px;
 }
 #intro img:first-of-type {
     max-width: 100%;
     max-height: 100%;
 }
-#side_dishes img {
-    max-width: 100%;
-    max-height: 100%;
-}
 @media screen and (min-width: 768px) {
-
+    body {
+        width: 768px;
+        position: relative;
+    }
+    nav {
+        width: 768px;
+        height: 175px;
+    }
+    ul {
+        max-height: none;
+        overflow: visible;
+        padding-top: 100px;
+        width: 768px;
+    }
+    nav ul {
+        flex-direction: row;
+        justify-content: left;
+    }
+    nav li {
+        justify-content: left;
+        height: 75px;
+        width: 768px;
+        padding: 0 5px;
+    }
+    nav ul {
+        align-items: normal;
+        margin-left: -3em;
+        margin-top: -1em;
+        justify-content: space-between;
+    }
+    nav li span {
+        top: 4.3em;
+        margin-left: -1px;
+        position: relative;
+    }
+    nav li:first-child {
+        transition: background-color 0.5s ease;
+        background-color: transparent;
+    }
+    nav li a {
+        margin: -6px 0;
+        text-align: center;
+    }
+    nav ul li img {
+        display: revert;
+        max-width: 80%;
+        max-height: 80%;
+        margin-top: -7px;
+    }
+    nav li:first-child svg {
+        left: -1.3em;
+        width: 75px;
+    }
+    nav label {
+        display: none;
+    }
+    span svg {
+        display: none;
+    }
+    #site-search {
+        left: 26em;
+        top: -7em;
+        position: relative;
+        z-index: 3;
+    }
+    button {
+        position: relative;
+        z-index: 3;
+        left: 49em;
+        top: -17.93em;
+    }
+    nav li:last-child svg {
+        left: 26.5em;
+        top: .25em;
+        position: relative;
+    }
+    nav li:last-child p {
+        position: relative;
+        left: 26.1em;
+    }
+    h1 {
+        text-align: left;
+        margin-left: 15px;
+        margin-top: -103px;
+        margin-bottom: -40px;
+    }
+    menu {
+        margin-left: 77px;
+    }
+    #background {
+        background-color: rgba(230, 240, 243, 0.3);
+        display: grid;
+        position: relative;
+        top: 5em;
+        height: 75px;
+        align-items: center;
+    }
+    #details p {
+        text-align: center;
+        line-height: 2;
+    }
+    #ingredients h2 {
+        text-align: left;
+        margin-left: 50px;
+    }
+    #ingredients ul {
+        padding-top: 10px;
+        margin-left: 30px;
+    }
+    #directions h2 {
+        position: relative;
+        top: -10.65em;
+        right: -11em;
+    }
+    #directions ol {
+        margin-top: -309px;
+        margin-left: 400px;
+        width: 300px;
+    }
+    #side_dishes {
+        height: 400px;
+        width: 768px;
+        flex-wrap: wrap;
+        padding-top: 60px;
+    }
+    #side_dishes h2 {
+        position: absolute;
+        left: 4.5em;
+        top: 79em;
+    }
+    #side_dishes img {
+        max-width: 20%;
+    }
+    #side_dishes h3:first-of-type {
+        margin-left: 160px;
+        position: relative;
+        font-size: 25px;
+        top: 0em;
+    }
+    #side_dishes img:first-of-type {
+        top: -1.6em;
+        position: relative;
+    }
+    #side_dishes p:first-of-type {
+        margin-left: 160px;
+        top: -6em;
+    }
+    #side_dishes img:nth-of-type(2) {
+        top: -1.5em;
+        position: relative;
+    }
+    #side_dishes p {
+        margin-left: 159px;
+        width: 20%;
+    }
+    #side_dishes h3:nth-of-type(2) {
+        position: relative;
+        left: .75em;
+        top: .1em;
+    }
+    #side_dishes p:nth-of-type(4) {
+        position: relative;
+        top: -5em;
+    }
+    #side_dishes p:nth-of-type(3) {
+        position: relative;
+        top: -6em;
+    }
+    #side_dishes img:nth-of-type(3) {
+        position: relative;
+        left: -1.25em;
+        top: -1.7em;
+    }
+    #side_dishes p:nth-of-type(5) {
+        position: relative;
+        top: -5em;
+        left: -1em;
+    }
+    #side_dishes h3:nth-of-type(3) {
+        position: relative;
+        top: 0;
+    }
+    #side_dishes p:nth-of-type(6) {
+        position: relative;
+        top: -4em;
+        left: -1em;
+    }
+    #side_dishes img:nth-of-type(4) {
+        position: relative;
+        left: -1.25em;
+        top: -.7em;
+    }
+    #side_dishes h3:nth-of-type(4) {
+        position: relative;
+        top: .5em;
+    }
+    #side_dishes p:nth-of-type(7) {
+        position: relative;
+        top: -5em;
+        left: -1em;
+    }
+    #side_dishes p:nth-of-type(8) {
+        position: relative;
+        top: -4em;
+        left: -1em;
+    }
+    #connect {
+        width: 768px;
+    }
+    #connect ul {
+        margin-top: -70px;
+        margin-left: 350px;
+        width: 400px;
+    }
+    footer {
+        width: 768px;
+    }
+    footer img{
+        max-width: 75%;
+        max-height: 75%;
+        margin-top: -200px;
+        margin-left: 50px;
+    }
+    footer p{
+        top: 12em;
+        left: -10.5em;
+    }
 }
 @media screen and (min-width: 1280px) {
-
+    body {
+        width: 1280px;
+        position: relative;
+    }
+    nav {
+        width: 1280px;
+        height: 150px;
+    }
+    nav ul {
+        width: 1000px;
+        margin-top: -6em;
+        margin-left: 7em;
+    }
+    nav li span {
+        top: 5.5em;
+    }
+    #site-search {
+        top: 8em;
+    }
+    button {
+        top: -3em;
+    }
+    nav li:last-child svg, nav li:last-child p {
+        left: 50em;
+        top: 2em;
+    }
+    nav li:first-child svg {
+        left: -1.3em;
+        width: 200px;
+        height: 150px;
+    }
+    h1 {
+        text-align: center;
+        margin-top: 10px;
+    }
+    #intro img:first-of-type {
+        max-width: 50%;
+        margin-left: 100px;
+    }
+    menu {
+        grid-template-columns: 1fr;
+        height: 950px;
+        width: 100px;
+        margin-left: 0px;
+        margin-top: 8px;
+        background-color: white;
+        outline: #EB5428 solid 3px;
+    }
+    #intro p {
+        position: relative;
+        right: -47em;
+        top: -60em;
+        width: 40%;
+        line-height: 2.5em;
+    }
+    #background {
+        background-color: transparent;
+    }
+    #details {
+        display: flex;
+        flex-direction: row ;
+        background-color:black;
+        color: #7ABFBF;
+        margin-top: -400px;
+        height: 100px;
+    }
+    #details h2 {
+        display: block;
+        position: absolute;
+        left: 20em;
+        margin: 20px;
+    }
+    #details p {
+        margin-top: 50px;
+        width: 1000px;
+    }
+    #ingredients ul li {
+        line-height: 2em;
+    }
+    #directions h2 {
+        top: -13.5em;
+        right: -19em;
+    }
+    #directions ol {
+        width: 800px;
+        margin-top: -385px;
+    }
+    #side_dishes {
+        width: 1280px;
+        display: block;
+        height: 500px;
+    }
+    #side_dishes h2 {
+        top: 65em;
+        left: 13em;
+    }
+    #connect {
+        width: 1280px;
+    }
+    #connect ul {
+        margin-left: 700px;
+        justify-content: space-between;
+        width: 500px;
+    }
+    footer {
+        width: 1280px;
+        margin-top: -50px;
+    }
+    footer img {
+        margin-top: -400px;
+        max-width: 250%;
+        max-height: 250%;
+    }
+    footer p {
+        top: 15em;
+        left: -17em;
+    }
+    footer p:nth-child(2) {
+        top: 12em;
+    }
 }
